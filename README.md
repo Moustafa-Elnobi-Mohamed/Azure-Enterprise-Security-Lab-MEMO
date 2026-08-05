@@ -26,7 +26,7 @@ The objective is to simulate the responsibilities of a **Cloud Security Engineer
 - Build a complete Azure enterprise environment from scratch
 - Implement Microsoft Entra ID identity and access management
 - Secure Azure resources following Microsoft's best practices
-- Learn Infrastructure as Code (Terraform)
+- Infrastructure as Code (Terraform)
 - Automate deployments using PowerShell, Azure CLI, and GitHub Actions
 - Configure Microsoft Defender for Cloud and Microsoft Sentinel
 - Simulate real-world cloud security scenarios
