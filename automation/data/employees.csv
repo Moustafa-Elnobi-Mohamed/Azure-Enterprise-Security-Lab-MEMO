@@ -1,0 +1,42 @@
+FirstName,LastName,Department,Group,JobTitle,Office,UserPrincipalName
+Moustafa,Mohamed,Executive,MEMO-GRP-CEO,Chief Executive Officer,HQ,ceo@elnobimostafagmail.onmicrosoft.com
+
+Emily,Parker,Executive,MEMO-GRP-Executives,Executive Director,HQ,emily.parker@elnobimostafagmail.onmicrosoft.com
+David,Miller,Executive,MEMO-GRP-Executives,Operations Executive,HQ,david.miller@elnobimostafagmail.onmicrosoft.com
+Jennifer,White,Executive,MEMO-GRP-Executives,Executive Manager,HQ,jennifer.white@elnobimostafagmail.onmicrosoft.com
+
+Michael,Chen,Finance,MEMO-GRP-Finance,Finance Manager,HQ,michael.chen@elnobimostafagmail.onmicrosoft.com
+Olivia,Garcia,Finance,MEMO-GRP-Finance,Financial Analyst,HQ,olivia.garcia@elnobimostafagmail.onmicrosoft.com
+Ethan,Brooks,Finance,MEMO-GRP-Finance,Accountant,HQ,ethan.brooks@elnobimostafagmail.onmicrosoft.com
+
+Sarah,Johnson,HR,MEMO-GRP-HR,HR Manager,HQ,sarah.johnson@elnobimostafagmail.onmicrosoft.com
+Jessica,Moore,HR,MEMO-GRP-HR,HR Specialist,HQ,jessica.moore@elnobimostafagmail.onmicrosoft.com
+William,Scott,HR,MEMO-GRP-HR,Recruiter,HQ,william.scott@elnobimostafagmail.onmicrosoft.com
+
+Ava,Brown,Marketing,MEMO-GRP-Marketing,Marketing Manager,HQ,ava.brown@elnobimostafagmail.onmicrosoft.com
+Sophia,Davis,Marketing,MEMO-GRP-Marketing,Marketing Specialist,HQ,sophia.davis@elnobimostafagmail.onmicrosoft.com
+Noah,Wilson,Marketing,MEMO-GRP-Marketing,Marketing Coordinator,HQ,noah.wilson@elnobimostafagmail.onmicrosoft.com
+
+Alex,Thompson,Engineering,MEMO-GRP-Developers,Backend Developer,IT,alex.thompson@elnobimostafagmail.onmicrosoft.com
+Lucas,Walker,Engineering,MEMO-GRP-Developers,Frontend Developer,IT,lucas.walker@elnobimostafagmail.onmicrosoft.com
+Noah,Harris,Engineering,MEMO-GRP-Developers,DevOps Engineer,IT,noah.harris@elnobimostafagmail.onmicrosoft.com
+
+David,Carter,Cloud,MEMO-GRP-Cloud-Admins,Senior Cloud Administrator,IT,david.carter@elnobimostafagmail.onmicrosoft.com
+Sophia,Adams,Cloud,MEMO-GRP-Cloud-Admins,Cloud Administrator,IT,sophia.adams@elnobimostafagmail.onmicrosoft.com
+Benjamin,Lewis,Cloud,MEMO-GRP-Cloud-Admins,Cloud Administrator,IT,benjamin.lewis@elnobimostafagmail.onmicrosoft.com
+
+Emma,Rodriguez,Cloud,MEMO-GRP-Cloud-Engineers,Cloud Engineer,IT,emma.rodriguez@elnobimostafagmail.onmicrosoft.com
+James,Wilson,Cloud,MEMO-GRP-Cloud-Engineers,Infrastructure Engineer,IT,james.wilson@elnobimostafagmail.onmicrosoft.com
+Liam,Turner,Cloud,MEMO-GRP-Cloud-Engineers,Cloud Engineer,IT,liam.turner@elnobimostafagmail.onmicrosoft.com
+
+Michael,Brooks,Security,MEMO-GRP-Cloud-Security,Cloud Security Engineer,IT,michael.brooks@elnobimostafagmail.onmicrosoft.com
+Daniel,Kim,Security,MEMO-GRP-Cloud-Security,Identity Security Engineer,IT,daniel.kim@elnobimostafagmail.onmicrosoft.com
+Olivia,Martinez,Security,MEMO-GRP-Cloud-Security,SOC Analyst,IT,olivia.martinez@elnobimostafagmail.onmicrosoft.com
+
+Ryan,Cooper,Support,MEMO-GRP-Help-Desk,IT Support Specialist,IT,ryan.cooper@elnobimostafagmail.onmicrosoft.com
+Anna,Johnson,Support,MEMO-GRP-Help-Desk,Help Desk Technician,IT,anna.johnson@elnobimostafagmail.onmicrosoft.com
+Ethan,Hall,Support,MEMO-GRP-Help-Desk,Desktop Support,IT,ethan.hall@elnobimostafagmail.onmicrosoft.com
+
+Jacob,Green,Support,MEMO-GRP-Interns,IT Intern,IT,jacob.green@elnobimostafagmail.onmicrosoft.com
+Sophia,Turner,Support,MEMO-GRP-Interns,Cloud Intern,IT,sophia.turner@elnobimostafagmail.onmicrosoft.com
+Mason,Clark,Support,MEMO-GRP-Interns,Cybersecurity Intern,IT,mason.clark@elnobimostafagmail.onmicrosoft.com
