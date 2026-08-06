@@ -37,3 +37,15 @@ foreach ($User in $Users) {
         Write-Host "⚠️ Already a member or another error occurred." -ForegroundColor Yellow
     }
 }
+
+$Member = Get-MgGroupMember `
+    -GroupId $Group.Id -All |
+Where-Object Id -eq $AzureUser.Id
+
+if (-not $Member) {
+    New-MgGroupMemberByRef ...
+    Write-Host "✅ Added"
+}
+else {
+    Write-Host "Already a member"
+}
