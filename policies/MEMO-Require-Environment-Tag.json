@@ -1,0 +1,21 @@
+{
+    "properties": {
+        "displayName": "MEMO - Require Environment Tag",
+        "policyType": "Custom",
+        "mode": "Indexed",
+        "description": "Requires MEMO resources to contain an Environment tag.",
+        "metadata": {
+            "category": "MEMO Security Governance",
+            "version": "1.0.0"
+        },
+        "policyRule": {
+            "if": {
+                "field": "tags['Environment']",
+                "exists": "false"
+            },
+            "then": {
+                "effect": "audit"
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+"DisplayName","RoleDefinitionName","ObjectType","Scope"
+"MEMO-GRP-Cloud-Engineers","Contributor","Group","/subscriptions/bab0deae-9a08-48d3-be47-9d3fe97b26b8/resourceGroups/MEMO-RG-Engineering"
+"MEMO-GRP-Developers","Contributor","Group","/subscriptions/bab0deae-9a08-48d3-be47-9d3fe97b26b8/resourceGroups/MEMO-RG-Development"
+"MEMO-GRP-Help-Desk","Reader","Group","/subscriptions/bab0deae-9a08-48d3-be47-9d3fe97b26b8/resourceGroups/MEMO-RG-Shared"
+"MEMO-GRP-Finance","Reader","Group","/subscriptions/bab0deae-9a08-48d3-be47-9d3fe97b26b8/resourceGroups/MEMO-RG-Finance"
+"MEMO-GRP-HR","Reader","Group","/subscriptions/bab0deae-9a08-48d3-be47-9d3fe97b26b8/resourceGroups/MEMO-RG-HR"
+"MEMO-GRP-Marketing","Reader","Group","/subscriptions/bab0deae-9a08-48d3-be47-9d3fe97b26b8/resourceGroups/MEMO-RG-Shared"
+"MEMO-GRP-Interns","Contributor","Group","/subscriptions/bab0deae-9a08-48d3-be47-9d3fe97b26b8/resourceGroups/MEMO-RG-Sandbox"
