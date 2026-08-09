@@ -1,0 +1,12 @@
+AzureActivity
+| where TimeGenerated > ago(7d)
+| summarize
+    TotalOperations=count(),
+    FailedOperations=countif(ActivityStatusValue == "Failed"),
+    SuccessfulOperations=countif(ActivityStatusValue == "Succeeded"),
+    RBACChanges=countif(OperationNameValue contains "roleAssignments"),
+    PolicyOperations=countif(OperationNameValue contains "policy"),
+    ResourceChanges=countif(
+        OperationNameValue contains "write"
+        or OperationNameValue contains "delete"
+    )

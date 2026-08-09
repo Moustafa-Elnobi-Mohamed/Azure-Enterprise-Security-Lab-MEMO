@@ -1,0 +1,18 @@
+AzureActivity
+| where TimeGenerated > ago(7d)
+| where OperationNameValue contains "roleAssignments"
+| extend
+    PrivilegeLevel = case(
+        ResourceId contains "Owner", "Owner",
+        ResourceId contains "Contributor", "Contributor",
+        "Other"
+    )
+| project
+    TimeGenerated,
+    Caller,
+    PrivilegeLevel,
+    OperationNameValue,
+    ActivityStatusValue,
+    ResourceGroup,
+    ResourceId
+| order by TimeGenerated desc

@@ -1,0 +1,12 @@
+SigninLogs
+| where TimeGenerated > ago(24h)
+| where ResultType != 0
+| project
+    TimeGenerated,
+    UserPrincipalName,
+    AppDisplayName,
+    IPAddress,
+    ResultDescription,
+    ResultType,
+    Location
+| order by TimeGenerated desc

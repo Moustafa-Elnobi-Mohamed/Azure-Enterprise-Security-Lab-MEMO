@@ -1,0 +1,12 @@
+AzureActivity
+| where TimeGenerated > ago(24h)
+| where ActivityStatusValue == "Succeeded"
+| where CategoryValue == "Administrative"
+| project
+    TimeGenerated,
+    Caller,
+    OperationNameValue,
+    ResourceGroup,
+    ResourceId,
+    ActivityStatusValue
+| order by TimeGenerated desc

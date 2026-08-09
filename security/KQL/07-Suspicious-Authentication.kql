@@ -1,0 +1,8 @@
+SigninLogs
+| where TimeGenerated > ago(24h)
+| summarize
+    SignIns=count(),
+    FailedSignIns=countif(ResultType != 0),
+    SuccessfulSignIns=countif(ResultType == 0)
+    by UserPrincipalName
+| order by FailedSignIns desc

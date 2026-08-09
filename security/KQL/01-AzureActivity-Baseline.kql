@@ -1,0 +1,9 @@
+AzureActivity
+| where TimeGenerated > ago(24h)
+| summarize
+    Operations=count(),
+    Successful=countif(ActivityStatusValue == "Succeeded"),
+    Failed=countif(ActivityStatusValue == "Failed"),
+    Callers=dcount(Caller)
+    by ResourceGroup, OperationNameValue
+| order by Operations desc

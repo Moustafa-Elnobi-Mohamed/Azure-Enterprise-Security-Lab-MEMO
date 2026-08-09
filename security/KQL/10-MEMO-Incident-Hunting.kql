@@ -1,0 +1,10 @@
+AzureActivity
+| where TimeGenerated > ago(10m)
+| where OperationNameValue contains "roleAssignments"
+| project
+    TimeGenerated,
+    Caller,
+    OperationNameValue,
+    ResourceGroup,
+    ResourceId,
+    ActivityStatusValue

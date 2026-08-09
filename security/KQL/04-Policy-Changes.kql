@@ -1,0 +1,12 @@
+AzureActivity
+| where TimeGenerated > ago(7d)
+| where OperationNameValue contains "policy"
+| project
+    TimeGenerated,
+    Caller,
+    OperationNameValue,
+    ActivityStatusValue,
+    ResourceGroup,
+    ResourceId,
+    CorrelationId
+| order by TimeGenerated desc
