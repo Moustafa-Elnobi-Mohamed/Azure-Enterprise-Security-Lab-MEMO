@@ -1,0 +1,11 @@
+AzureActivity
+| where TimeGenerated > ago(24h)
+| where ResourceGroup contains "MEMO-RG-Network"
+| project
+    TimeGenerated,
+    Caller,
+    OperationNameValue,
+    ActivityStatusValue,
+    ResourceGroup,
+    ResourceId
+| order by TimeGenerated desc
