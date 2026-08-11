@@ -46,3 +46,55 @@ resource "azurerm_subnet" "security" {
   address_prefixes     = ["10.10.4.0/24"]
   default_outbound_access_enabled = false
 }
+
+resource "azurerm_network_security_group" "app" {
+  name                = "MEMO-NSG-APP"
+  location            = var.location
+  resource_group_name = var.resource_group_name
+
+  tags = {
+    Environment = "Lab"
+    ManagedBy   = "Terraform"
+    Project     = "MEMO"
+    Security    = "SC-500"
+  }
+}
+
+resource "azurerm_network_security_group" "data" {
+  name                = "MEMO-NSG-DATA"
+  location            = var.location
+  resource_group_name = var.resource_group_name
+
+  tags = {
+    Environment = "Lab"
+    ManagedBy   = "Terraform"
+    Project     = "MEMO"
+    Security    = "SC-500"
+  }
+}
+
+resource "azurerm_network_security_group" "mgmt" {
+  name                = "MEMO-NSG-MGMT"
+  location            = var.location
+  resource_group_name = var.resource_group_name
+
+  tags = {
+    Environment = "Lab"
+    ManagedBy   = "Terraform"
+    Project     = "MEMO"
+    Security    = "SC-500"
+  }
+}
+
+resource "azurerm_network_security_group" "security" {
+  name                = "MEMO-NSG-SECURITY"
+  location            = var.location
+  resource_group_name = var.resource_group_name
+
+  tags = {
+    Environment = "Lab"
+    ManagedBy   = "Terraform"
+    Project     = "MEMO"
+    Security    = "SC-500"
+  }
+}
