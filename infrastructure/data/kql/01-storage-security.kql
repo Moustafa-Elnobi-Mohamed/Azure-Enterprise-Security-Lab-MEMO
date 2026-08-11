@@ -1,0 +1,10 @@
+StorageBlobLogs
+| where TimeGenerated > ago(24h)
+| project
+    TimeGenerated,
+    OperationName,
+    StatusCode,
+    AuthenticationType,
+    CallerIpAddress,
+    Uri
+| order by TimeGenerated desc

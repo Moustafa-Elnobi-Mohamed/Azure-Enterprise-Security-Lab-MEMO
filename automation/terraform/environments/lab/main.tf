@@ -13,7 +13,18 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_resource_group" "terraform_test" {
-  name     = "MEMO-RG-Terraform-Test"
-  location = "East US"
+module "networking" {
+  source = "../../modules/networking"
+
+  resource_group_name = "MEMO-RG-Network"
+  location            = "eastus"
+  vnet_name           = "MEMO-VNET-CORE"
+  address_space       = "10.10.0.0/16"
+
+  tags = {
+    Project     = "MEMO"
+    Environment = "Lab"
+    ManagedBy   = "Terraform"
+    Security    = "SC-500"
+  }
 }
