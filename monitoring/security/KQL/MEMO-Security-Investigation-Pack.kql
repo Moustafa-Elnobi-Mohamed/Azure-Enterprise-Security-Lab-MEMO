@@ -1,0 +1,82 @@
+// ==========================================
+// MEMO SECURITY INVESTIGATION PACK
+// ==========================================
+
+// 1. RBAC changes
+
+AzureActivity
+| where TimeGenerated > ago(24h)
+| where OperationNameValue contains "roleAssignments"
+| project
+    TimeGenerated,
+    Caller,
+    OperationNameValue,
+    ActivityStatusValue,
+    ResourceGroup,
+    ResourceId
+| order by TimeGenerated desc
+
+
+// 2. Policy activity
+
+AzureActivity
+| where TimeGenerated > ago(24h)
+| where OperationNameValue contains "policy"
+| project
+    TimeGenerated,
+    Caller,
+    OperationNameValue,
+    ActivityStatusValue,
+    ResourceGroup,
+    ResourceId
+| order by TimeGenerated desc
+
+
+
+// 3. Network activity
+
+AzureActivity
+| where TimeGenerated > ago(24h)
+| where ResourceProviderValue =~ "Microsoft.Network"
+| project
+    TimeGenerated,
+    Caller,
+    OperationNameValue,
+    ActivityStatusValue,
+    ResourceGroup,
+    ResourceId
+| order by TimeGenerated desc
+
+
+
+// 4. Storage activity
+
+AzureActivity
+| where TimeGenerated > ago(24h)
+| where ResourceProviderValue =~ "Microsoft.Storage"
+| project
+    TimeGenerated,
+    Caller,
+    OperationNameValue,
+    ActivityStatusValue,
+    ResourceGroup,
+    ResourceId
+| order by TimeGenerated desc
+
+
+
+// 5. Failed Azure control-plane operations
+
+AzureActivity
+| where TimeGenerated > ago(24h)
+| where ActivityStatusValue !~ "Succeeded"
+| project
+    TimeGenerated,
+    Caller,
+    OperationNameValue,
+    ActivityStatusValue,
+    ResourceGroup,
+    ResourceId
+| order by TimeGenerated desc
+
+

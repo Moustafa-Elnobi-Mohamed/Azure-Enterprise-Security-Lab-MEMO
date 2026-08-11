@@ -1,0 +1,21 @@
+AzureActivity
+| where TimeGenerated > ago(24h)
+| where ResourceProviderValue =~ "Microsoft.Storage"
+| project
+    TimeGenerated,
+    Caller,
+    OperationNameValue,
+    ActivityStatusValue,
+    ResourceGroup,
+    ResourceId
+| order by TimeGenerated desc
+
+AzureActivity
+| where TimeGenerated > ago(24h)
+| where ResourceProviderValue =~ "Microsoft.Storage"
+| summarize
+    Operations=count(),
+    Successful=countif(ActivityStatusValue =~ "Succeeded"),
+    Failed=countif(ActivityStatusValue !~ "Succeeded")
+    by OperationNameValue
+| order by Operations desc

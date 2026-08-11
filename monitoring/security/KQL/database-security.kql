@@ -1,0 +1,19 @@
+AzureActivity
+| where TimeGenerated > ago(24h)
+| where ResourceProviderValue =~ "Microsoft.Sql"
+| project
+    TimeGenerated,
+    Caller,
+    OperationNameValue,
+    ActivityStatusValue,
+    ResourceGroup,
+    ResourceId
+| order by TimeGenerated desc
+
+
+AzureActivity
+| where TimeGenerated > ago(24h)
+| where ResourceProviderValue =~ "Microsoft.Sql"
+| summarize Count=count()
+    by OperationNameValue, ActivityStatusValue
+| order by Count desc

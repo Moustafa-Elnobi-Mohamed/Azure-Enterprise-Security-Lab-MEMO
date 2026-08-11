@@ -1,0 +1,25 @@
+AzureActivity
+| where TimeGenerated > ago(24h)
+| where OperationNameValue contains "Microsoft.Authorization"
+| project
+    TimeGenerated,
+    Caller,
+    OperationNameValue,
+    ActivityStatusValue,
+    ResourceGroup,
+    ResourceId
+| order by TimeGenerated desc
+
+
+
+AzureActivity
+| where TimeGenerated > ago(24h)
+| where OperationNameValue contains "Microsoft.Authorization"
+| project
+    TimeGenerated,
+    Caller,
+    OperationNameValue,
+    ActivityStatusValue,
+    ResourceGroup,
+    ResourceId
+| order by TimeGenerated desc
