@@ -1,0 +1,26 @@
+# Day 8
+
+Today MEMO moved into secrets and data security.
+
+Implemented:
+- Terraform-managed Key Vault
+- Azure RBAC authorization
+- Key Vault Secrets Officer assignment
+- Lab secret lifecycle
+- Key Vault audit logging
+- Log Analytics integration
+- KQL for Key Vault activity
+- Sentinel analytics rule
+- Hardened Azure Storage Terraform module
+- Storage deployment kept deferred under the zero-cost policy
+
+Security flow:
+
+Identity
+→ RBAC
+→ Key Vault
+→ Audit logs
+→ Log Analytics
+→ Sentinel
+→ KQL
+→ Detection

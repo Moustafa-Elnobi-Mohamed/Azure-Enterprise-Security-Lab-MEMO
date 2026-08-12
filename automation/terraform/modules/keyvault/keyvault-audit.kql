@@ -1,0 +1,24 @@
+AzureDiagnostics
+| where TimeGenerated > ago(24h)
+| where ResourceProvider == "MICROSOFT.KEYVAULT"
+| project
+    TimeGenerated,
+    OperationName,
+    ResultType,
+    CallerIPAddress,
+    identity_claim_upn_s,
+    Resource
+| order by TimeGenerated desc
+
+AzureDiagnostics
+| where TimeGenerated > ago(24h)
+| where ResourceProvider == "MICROSOFT.KEYVAULT"
+| where ResultType !in ("Success", "200")
+| project
+    TimeGenerated,
+    OperationName,
+    ResultType,
+    CallerIPAddress,
+    identity_claim_upn_s,
+    Resource
+| order by TimeGenerated desc

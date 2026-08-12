@@ -45,3 +45,17 @@ module "keyvault" {
     Security    = "SC-500"
   }
 }
+module "storage" {
+  source = "../../modules/storage"
+
+  resource_group_name  = "MEMO-RG-Shared"
+  location             = "eastus"
+  storage_account_name = "memosecdata48219"
+
+  tags = {
+    Project     = "MEMO"
+    Environment = "Lab"
+    ManagedBy   = "Terraform"
+    Security    = "SC-500"
+  }
+}
