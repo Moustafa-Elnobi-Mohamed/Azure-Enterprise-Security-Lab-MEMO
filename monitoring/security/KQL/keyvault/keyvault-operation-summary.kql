@@ -1,0 +1,5 @@
+AzureDiagnostics
+| where TimeGenerated > ago(1h)
+| where ResourceProvider == "MICROSOFT.KEYVAULT"
+| summarize Count=count() by OperationName, ResultType
+| order by Count desc

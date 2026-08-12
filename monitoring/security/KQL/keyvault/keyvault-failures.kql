@@ -1,0 +1,18 @@
+// MEMO - Failed Key Vault Secret Access
+//
+// Detects unsuccessful Key Vault secret retrieval attempts.
+// Expected Authentication 401 events are excluded to reduce noise.
+
+AzureDiagnostics
+| where TimeGenerated > ago(24h)
+| where ResourceProvider == "MICROSOFT.KEYVAULT"
+| where OperationName == "SecretGet"
+| where httpStatusCode_d >= 400
+| project
+    TimeGenerated,
+    OperationName,
+    httpStatusCode_d,
+    CallerIPAddress,
+    Resource,
+    ResourceId
+| order by TimeGenerated desc
