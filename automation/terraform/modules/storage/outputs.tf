@@ -1,5 +1,6 @@
 output "storage_account_id" {
-  value = azurerm_storage_account.memo.id
+  description = "Resource ID of the MEMO storage account"
+  value       = azurerm_storage_account.memo.id
 }
 
 output "storage_account_name" {

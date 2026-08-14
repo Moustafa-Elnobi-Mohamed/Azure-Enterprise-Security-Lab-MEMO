@@ -59,3 +59,44 @@ module "storage" {
     Security    = "SC-500"
   }
 }
+
+module "storage_private_endpoint" {
+  source = "../../modules/private-endpoint"
+
+  name                = "MEMO-PE-STORAGE"
+  resource_group_name = "MEMO-RG-Network"
+  location            = "eastus"
+
+  subnet_id = module.networking.data_subnet_id
+
+  private_connection_resource_id = module.storage.storage_account_id
+  subresource_names              = ["blob"]
+
+  private_dns_zone_ids = [
+    module.storage_private_dns.private_dns_zone_id
+  ]
+
+  tags = {
+    Project     = "MEMO"
+    Environment = "Lab"
+    ManagedBy   = "Terraform"
+    Security    = "SC-500"
+  }
+}
+
+module "storage_private_dns" {
+  source = "../../modules/private-dns"
+
+  resource_group_name   = "MEMO-RG-Network"
+  private_dns_zone_name = "privatelink.blob.core.windows.net"
+  virtual_network_id    = module.networking.vnet_id
+  vnet_link_name        = "MEMO-LINK-STORAGE-BLOB"
+
+  tags = {
+    Project     = "MEMO"
+    Environment = "Lab"
+    ManagedBy   = "Terraform"
+    Security    = "SC-500"
+  }
+}
+

@@ -32,18 +32,18 @@ resource "azurerm_subnet" "data" {
 }
 
 resource "azurerm_subnet" "mgmt" {
-  name                 = "MEMO-SUBNET-MGMT"
-  resource_group_name  = var.resource_group_name
-  virtual_network_name = azurerm_virtual_network.memo.name
-  address_prefixes     = ["10.10.3.0/24"]
+  name                            = "MEMO-SUBNET-MGMT"
+  resource_group_name             = var.resource_group_name
+  virtual_network_name            = azurerm_virtual_network.memo.name
+  address_prefixes                = ["10.10.3.0/24"]
   default_outbound_access_enabled = false
 }
 
 resource "azurerm_subnet" "security" {
-  name                 = "MEMO-SUBNET-SECURITY"
-  resource_group_name  = var.resource_group_name
-  virtual_network_name = azurerm_virtual_network.memo.name
-  address_prefixes     = ["10.10.4.0/24"]
+  name                            = "MEMO-SUBNET-SECURITY"
+  resource_group_name             = var.resource_group_name
+  virtual_network_name            = azurerm_virtual_network.memo.name
+  address_prefixes                = ["10.10.4.0/24"]
   default_outbound_access_enabled = false
 }
 
