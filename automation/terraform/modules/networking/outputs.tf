@@ -1,12 +1,12 @@
 output "vnet_id" {
 
-description = "Resource ID of the MEMO virtual network"
-  value = azurerm_virtual_network.memo.id
+  description = "Resource ID of the MEMO virtual network"
+  value       = azurerm_virtual_network.memo.id
 }
 
 output "vnet_name" {
   description = "Name of the MEMO virtual network"
-  value = azurerm_virtual_network.memo.name
+  value       = azurerm_virtual_network.memo.name
 }
 
 output "app_subnet_id" {

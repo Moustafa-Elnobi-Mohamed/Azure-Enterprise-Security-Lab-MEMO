@@ -12,7 +12,7 @@ resource "azurerm_storage_account" "memo" {
   shared_access_key_enabled       = false
   default_to_oauth_authentication = true
   local_user_enabled              = false
-  public_network_access_enabled = false
+  public_network_access_enabled   = false
 
   tags = var.tags
 }
