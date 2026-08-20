@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: memo-secure-service
+  namespace: memo-app
+  labels:
+    app: memo-secure-app
+spec:
+  type: ClusterIP
+  selector:
+    app: memo-secure-app
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: http
