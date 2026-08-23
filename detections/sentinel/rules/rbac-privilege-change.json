@@ -1,0 +1,72 @@
+{
+  "kind": "Scheduled",
+  "properties": {
+    "alertRuleTemplateName": null,
+    "customDetails": {
+      "CorrelationId": "CorrelationId",
+      "Operation": "OperationNameValue",
+      "ResourceGroup": "ResourceGroup",
+      "Status": "ActivityStatusValue",
+      "SubscriptionId": "SubscriptionId"
+    },
+    "description": "Detects successful Azure RBAC role assignment creation or deletion operations, deduplicated by CorrelationId and enriched with caller and source IP entities.",
+    "displayName": "MEMO - RBAC Privilege Change Detection",
+    "enabled": true,
+    "entityMappings": [
+      {
+        "entityType": "Account",
+        "fieldMappings": [
+          {
+            "columnName": "AccountName",
+            "identifier": "Name"
+          },
+          {
+            "columnName": "AccountUPNSuffix",
+            "identifier": "UPNSuffix"
+          }
+        ]
+      },
+      {
+        "entityType": "IP",
+        "fieldMappings": [
+          {
+            "columnName": "CallerIpAddress",
+            "identifier": "Address"
+          }
+        ]
+      }
+    ],
+    "eventGroupingSettings": {
+      "aggregationKind": "AlertPerResult"
+    },
+    "incidentConfiguration": {
+      "createIncident": true,
+      "groupingConfiguration": {
+        "enabled": true,
+        "groupByAlertDetails": [],
+        "groupByCustomDetails": [],
+        "groupByEntities": [
+          "Account"
+        ],
+        "lookbackDuration": "PT5H",
+        "matchingMethod": "Selected",
+        "reopenClosedIncident": false
+      }
+    },
+    "query": "AzureActivity\n| where TimeGenerated > ago(10m)\n| where OperationNameValue in~ (\n    \"Microsoft.Authorization/roleAssignments/write\",\n    \"Microsoft.Authorization/roleAssignments/delete\"\n)\n| where ActivityStatusValue =~ \"Success\"\n| summarize arg_max(TimeGenerated, *) by CorrelationId\n| extend\n    AccountName = iff(\n        Caller contains \"@\",\n        tostring(split(Caller, \"@\")[0]),\n        Caller\n    ),\n    AccountUPNSuffix = iff(\n        Caller contains \"@\",\n        tostring(split(Caller, \"@\")[1]),\n        \"\"\n    )\n| project\n    TimeGenerated,\n    Caller,\n    AccountName,\n    AccountUPNSuffix,\n    CallerIpAddress,\n    OperationNameValue,\n    ActivityStatusValue,\n    ResourceGroup,\n    ResourceId,\n    SubscriptionId,\n    CorrelationId",
+    "queryFrequency": "PT5M",
+    "queryPeriod": "PT10M",
+    "severity": "Medium",
+    "suppressionDuration": "PT5H",
+    "suppressionEnabled": false,
+    "tactics": [
+      "Persistence",
+      "PrivilegeEscalation"
+    ],
+    "techniques": [
+      "T1098"
+    ],
+    "triggerOperator": "GreaterThan",
+    "triggerThreshold": 0
+  }
+}
