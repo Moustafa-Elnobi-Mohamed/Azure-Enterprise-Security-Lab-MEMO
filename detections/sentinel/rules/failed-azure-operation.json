@@ -1,0 +1,72 @@
+{
+  "kind": "Scheduled",
+  "properties": {
+    "alertRuleTemplateName": null,
+    "customDetails": {
+      "CorrelationIds": "CorrelationIds",
+      "FailureCount": "FailureCount",
+      "FirstSeen": "FirstSeen",
+      "LastSeen": "LastSeen",
+      "Operations": "Operations",
+      "ResourceGroups": "ResourceGroups"
+    },
+    "description": "Detects three or more unique failed Azure control-plane operations from the same account and source IP within ten minutes.",
+    "displayName": "MEMO - Failed Azure Operation Detection",
+    "enabled": true,
+    "entityMappings": [
+      {
+        "entityType": "Account",
+        "fieldMappings": [
+          {
+            "columnName": "AccountName",
+            "identifier": "Name"
+          },
+          {
+            "columnName": "AccountUPNSuffix",
+            "identifier": "UPNSuffix"
+          }
+        ]
+      },
+      {
+        "entityType": "IP",
+        "fieldMappings": [
+          {
+            "columnName": "CallerIpAddress",
+            "identifier": "Address"
+          }
+        ]
+      }
+    ],
+    "eventGroupingSettings": {
+      "aggregationKind": "AlertPerResult"
+    },
+    "incidentConfiguration": {
+      "createIncident": true,
+      "groupingConfiguration": {
+        "enabled": true,
+        "groupByAlertDetails": [],
+        "groupByCustomDetails": [],
+        "groupByEntities": [
+          "Account"
+        ],
+        "lookbackDuration": "PT5H",
+        "matchingMethod": "Selected",
+        "reopenClosedIncident": false
+      }
+    },
+    "query": "AzureActivity\n| where TimeGenerated > ago(10m)\n| where ActivityStatusValue in~ (\"Failed\", \"Failure\")\n| summarize arg_max(TimeGenerated, *) by CorrelationId\n| summarize\n    FailureCount=count(),\n    FirstSeen=min(TimeGenerated),\n    LastSeen=max(TimeGenerated),\n    Operations=make_set(OperationNameValue, 20),\n    ResourceGroups=make_set(ResourceGroup, 20),\n    CorrelationIds=make_set(CorrelationId, 20)\n    by Caller, CallerIpAddress\n| where FailureCount >= 3\n| extend\n    TimeGenerated=LastSeen,\n    AccountName=iff(\n        Caller contains \"@\",\n        tostring(split(Caller, \"@\")[0]),\n        Caller\n    ),\n    AccountUPNSuffix=iff(\n        Caller contains \"@\",\n        tostring(split(Caller, \"@\")[1]),\n        \"\"\n    ),\n    Operations=tostring(Operations),\n    ResourceGroups=tostring(ResourceGroups),\n    CorrelationIds=tostring(CorrelationIds)\n| project\n    TimeGenerated,\n    FirstSeen,\n    LastSeen,\n    FailureCount,\n    Caller,\n    AccountName,\n    AccountUPNSuffix,\n    CallerIpAddress,\n    Operations,\n    ResourceGroups,\n    CorrelationIds",
+    "queryFrequency": "PT5M",
+    "queryPeriod": "PT10M",
+    "severity": "Medium",
+    "suppressionDuration": "PT5H",
+    "suppressionEnabled": false,
+    "tactics": [
+      "PrivilegeEscalation"
+    ],
+    "techniques": [
+      "T1078"
+    ],
+    "triggerOperator": "GreaterThan",
+    "triggerThreshold": 0
+  }
+}
