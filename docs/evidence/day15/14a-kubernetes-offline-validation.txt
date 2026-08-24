@@ -1,0 +1,16 @@
+PASS: infrastructure/kubernetes/configmap.yaml document 1: ConfigMap/memo-app-config
+PASS: infrastructure/kubernetes/deployment.yaml document 1: Deployment/memo-secure-app
+PASS: infrastructure/kubernetes/namespace.yaml document 1: Namespace/memo-app
+PASS: infrastructure/kubernetes/network-policy.yaml document 1: NetworkPolicy/default-deny-all
+PASS: infrastructure/kubernetes/network-policy.yaml document 2: NetworkPolicy/allow-memo-app-ingress
+PASS: infrastructure/kubernetes/network-policy.yaml document 3: NetworkPolicy/allow-dns-egress
+PASS: infrastructure/kubernetes/rbac.yaml document 1: ServiceAccount/memo-auditor-sa
+PASS: infrastructure/kubernetes/rbac.yaml document 2: Role/memo-namespace-reader
+PASS: infrastructure/kubernetes/rbac.yaml document 3: RoleBinding/memo-namespace-reader-binding
+PASS: infrastructure/kubernetes/secret-example.yaml document 1: Secret/memo-example-secret
+PASS: infrastructure/kubernetes/service-account.yaml document 1: ServiceAccount/memo-workload-sa
+PASS: infrastructure/kubernetes/service.yaml document 1: Service/memo-secure-service
+PASS: Expected Kubernetes object count found: 12
+Files: 8
+Objects: 12
+Failures: 0

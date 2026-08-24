@@ -1,0 +1,41 @@
+PASS: All eight Kubernetes manifests are present
+PASS: Kubernetes manifest is not empty: configmap.yaml
+PASS: Kubernetes manifest is not empty: deployment.yaml
+PASS: Kubernetes manifest is not empty: namespace.yaml
+PASS: Kubernetes manifest is not empty: network-policy.yaml
+PASS: Kubernetes manifest is not empty: rbac.yaml
+PASS: Kubernetes manifest is not empty: secret-example.yaml
+PASS: Kubernetes manifest is not empty: service-account.yaml
+PASS: Kubernetes manifest is not empty: service.yaml
+PASS: Restricted Pod Security
+PASS: Non-root execution
+PASS: No privilege escalation
+PASS: Read-only root filesystem
+PASS: Dropped capabilities
+PASS: RuntimeDefault seccomp
+PASS: Disabled token mounting
+PASS: Resource limits
+PASS: NetworkPolicy
+PASS: ClusterIP service
+PASS: Version-pinned workload image
+PASS: All secure-container artifacts are present
+PASS: Container artifact is not empty: .dockerignore
+PASS: Container artifact is not empty: Dockerfile
+PASS: Container artifact is not empty: README.md
+PASS: Container artifact is not empty: default.conf
+PASS: Container artifact is not empty: index.html
+PASS: Version-specific container base
+PASS: Explicit container UID and GID
+PASS: Unprivileged container port
+PASS: Container health check
+PASS: NGINX server tokens disabled
+PASS: Content-type response protection
+PASS: Frame response protection
+PASS: Content Security Policy
+PASS: Dockerfile never switches to root
+PASS: Dockerfile copies only required artifacts
+PASS: Terraform module inventory is present: 26 files
+PASS: All four Bicep deployments are present
+PASS: No generated ARM JSON files are tracked beside Bicep
+
+Repository artifact failures: 0

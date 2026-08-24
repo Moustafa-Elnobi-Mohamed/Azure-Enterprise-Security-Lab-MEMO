@@ -1,0 +1,59 @@
+{
+  "TotalResources": 11,
+  "ByResourceGroup": [
+    {
+      "ResourceGroup": "MEMO-RG-Containers",
+      "Count": 2
+    },
+    {
+      "ResourceGroup": "MEMO-RG-Identity",
+      "Count": 1
+    },
+    {
+      "ResourceGroup": "MEMO-RG-Network",
+      "Count": 5
+    },
+    {
+      "ResourceGroup": "MEMO-RG-Security",
+      "Count": 1
+    },
+    {
+      "ResourceGroup": "memo-rg-monitoring",
+      "Count": 2
+    }
+  ],
+  "ByResourceType": [
+    {
+      "ResourceType": "Microsoft.App/containerApps",
+      "Count": 1
+    },
+    {
+      "ResourceType": "Microsoft.App/managedEnvironments",
+      "Count": 1
+    },
+    {
+      "ResourceType": "Microsoft.KeyVault/vaults",
+      "Count": 1
+    },
+    {
+      "ResourceType": "Microsoft.ManagedIdentity/userAssignedIdentities",
+      "Count": 1
+    },
+    {
+      "ResourceType": "Microsoft.Network/networkSecurityGroups",
+      "Count": 4
+    },
+    {
+      "ResourceType": "Microsoft.Network/virtualNetworks",
+      "Count": 1
+    },
+    {
+      "ResourceType": "Microsoft.OperationalInsights/workspaces",
+      "Count": 1
+    },
+    {
+      "ResourceType": "Microsoft.OperationsManagement/solutions",
+      "Count": 1
+    }
+  ]
+}

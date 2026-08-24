@@ -1,0 +1,6 @@
+MEMO Day 15 Validation Toolchain
+Python: Python 3.12.9
+Terraform: Terraform v1.15.8
+Bicep: unavailable
+kubectl: available
+Docker CLI: available

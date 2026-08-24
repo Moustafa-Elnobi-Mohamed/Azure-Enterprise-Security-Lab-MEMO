@@ -30,7 +30,7 @@ spec:
 
       containers:
         - name: memo-secure-app
-          image: nginxinc/nginx-unprivileged:alpine
+          image: nginxinc/nginx-unprivileged:1.28.1-alpine
           imagePullPolicy: IfNotPresent
 
           ports:

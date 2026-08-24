@@ -1,0 +1,62 @@
+[
+  {
+    "Location": "eastus",
+    "ResourceGroup": "MEMO-RG-Security",
+    "State": "Succeeded"
+  },
+  {
+    "Location": "eastus",
+    "ResourceGroup": "MEMO-RG-Network",
+    "State": "Succeeded"
+  },
+  {
+    "Location": "eastus",
+    "ResourceGroup": "MEMO-RG-Identity",
+    "State": "Succeeded"
+  },
+  {
+    "Location": "eastus",
+    "ResourceGroup": "MEMO-RG-Development",
+    "State": "Succeeded"
+  },
+  {
+    "Location": "eastus",
+    "ResourceGroup": "MEMO-RG-Production",
+    "State": "Succeeded"
+  },
+  {
+    "Location": "eastus",
+    "ResourceGroup": "MEMO-RG-Monitoring",
+    "State": "Succeeded"
+  },
+  {
+    "Location": "eastus",
+    "ResourceGroup": "MEMO-RG-Sandbox",
+    "State": "Succeeded"
+  },
+  {
+    "Location": "eastus",
+    "ResourceGroup": "MEMO-RG-Engineering",
+    "State": "Succeeded"
+  },
+  {
+    "Location": "eastus",
+    "ResourceGroup": "MEMO-RG-Finance",
+    "State": "Succeeded"
+  },
+  {
+    "Location": "eastus",
+    "ResourceGroup": "MEMO-RG-HR",
+    "State": "Succeeded"
+  },
+  {
+    "Location": "eastus",
+    "ResourceGroup": "MEMO-RG-Shared",
+    "State": "Succeeded"
+  },
+  {
+    "Location": "eastus",
+    "ResourceGroup": "MEMO-RG-Containers",
+    "State": "Succeeded"
+  }
+]

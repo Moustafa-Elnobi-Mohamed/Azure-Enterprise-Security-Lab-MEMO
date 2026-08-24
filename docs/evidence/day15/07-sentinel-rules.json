@@ -1,0 +1,26 @@
+[
+  {
+    "Enabled": true,
+    "Frequency": "PT5M",
+    "Grouping": true,
+    "Lookback": "PT10M",
+    "Name": "MEMO - RBAC Privilege Change Detection",
+    "Severity": "Medium"
+  },
+  {
+    "Enabled": true,
+    "Frequency": "PT5M",
+    "Grouping": true,
+    "Lookback": "PT10M",
+    "Name": "MEMO - Failed Azure Operation Detection",
+    "Severity": "Medium"
+  },
+  {
+    "Enabled": true,
+    "Frequency": "PT5M",
+    "Grouping": true,
+    "Lookback": "PT10M",
+    "Name": "MEMO - Failed Key Vault Secret Access",
+    "Severity": "Medium"
+  }
+]
