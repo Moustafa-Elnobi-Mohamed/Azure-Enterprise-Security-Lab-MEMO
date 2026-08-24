@@ -1,0 +1,15 @@
+{
+  "AutomationRules": [
+    {
+      "DisplayName": "MEMO - Native incident triage",
+      "Enabled": true,
+      "TriggersOn": "Incidents",
+      "TriggersWhen": "Created",
+      "ActionTypes": [
+        "ModifyProperties",
+        "AddIncidentTask"
+      ]
+    }
+  ],
+  "RunPlaybookActions": 0
+}

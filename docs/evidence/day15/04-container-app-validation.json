@@ -1,0 +1,15 @@
+{
+  "AllowInsecure": false,
+  "CPU": 0.25,
+  "ExternalIngress": true,
+  "Identity": "SystemAssigned",
+  "MaxReplicas": 1,
+  "Memory": "0.5Gi",
+  "MinReplicas": 0,
+  "Name": "memo-secure-app",
+  "ProvisioningState": "Succeeded",
+  "RunningStatus": "Running",
+  "TargetPort": 80,
+  "Transport": "Auto",
+  "WorkloadProfile": "Consumption"
+}

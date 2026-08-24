@@ -1,0 +1,71 @@
+{
+  "generatedUtc": "2026-08-24T23:08:22.673276+00:00",
+  "overallStatus": "PASS_WITH_EXCEPTIONS",
+  "summary": {
+    "PASS": 10,
+    "FAIL": 0,
+    "DOCUMENTED_EXCEPTION": 2
+  },
+  "results": [
+    {
+      "control": "Enterprise resource-group structure",
+      "status": "PASS",
+      "evidence": "All 12 expected resource groups are healthy."
+    },
+    {
+      "control": "Cost-controlled Azure footprint",
+      "status": "PASS",
+      "evidence": "Inventory contains 11 active MEMO resources."
+    },
+    {
+      "control": "Microsoft Defender pricing",
+      "status": "PASS",
+      "evidence": "Only free foundational Discovery and Foundational CSPM are active; paid workload protection plans remain disabled."
+    },
+    {
+      "control": "Container Apps cost controls",
+      "status": "PASS",
+      "evidence": "Consumption profile, scale 0-1, 0.25 vCPU, and 0.5Gi memory."
+    },
+    {
+      "control": "Container Apps identity and transport",
+      "status": "PASS",
+      "evidence": "System-assigned identity is enabled and insecure ingress is disabled."
+    },
+    {
+      "control": "Key Vault authorization",
+      "status": "PASS",
+      "evidence": "Azure RBAC authorization is enabled."
+    },
+    {
+      "control": "Key Vault deletion recovery",
+      "status": "PASS",
+      "evidence": "Soft delete and the MEMO-KV-Delete-Protection lock are active."
+    },
+    {
+      "control": "Key Vault purge protection",
+      "status": "DOCUMENTED_EXCEPTION",
+      "evidence": "Purge protection remains disabled so the temporary lab can be fully removed. A reversible CanNotDelete lock mitigates deletion risk."
+    },
+    {
+      "control": "Key Vault network isolation",
+      "status": "DOCUMENTED_EXCEPTION",
+      "evidence": "Public access remains enabled for the non-VNet-integrated lab workload. RBAC and diagnostic monitoring provide compensating controls; a paid private endpoint was intentionally excluded."
+    },
+    {
+      "control": "Microsoft Sentinel analytics",
+      "status": "PASS",
+      "evidence": "All three selected analytics rules are enabled with incident grouping."
+    },
+    {
+      "control": "Native Sentinel automation",
+      "status": "PASS",
+      "evidence": "Native labeling and investigation tasks are enabled with no playbook."
+    },
+    {
+      "control": "Log Analytics ingestion control",
+      "status": "PASS",
+      "evidence": "3.881714 MB ingested and 0.063201 MB marked billable over 30 days."
+    }
+  ]
+}

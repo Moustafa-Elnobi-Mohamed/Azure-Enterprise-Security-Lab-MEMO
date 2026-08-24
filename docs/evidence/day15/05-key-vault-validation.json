@@ -1,0 +1,8 @@
+{
+  "FirewallDefaultAction": null,
+  "Name": "MEMO-KV-SECURITY",
+  "PublicNetworkAccess": "Enabled",
+  "PurgeProtection": null,
+  "RBACAuthorization": true,
+  "SoftDelete": true
+}

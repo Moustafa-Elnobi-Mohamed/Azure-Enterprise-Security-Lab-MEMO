@@ -1,0 +1,32 @@
+[
+  {
+    "BillableMB": "0.063201",
+    "DataType": "AzureDiagnostics",
+    "TableName": "PrimaryResult",
+    "TotalMB": "0.063201"
+  },
+  {
+    "BillableMB": "0",
+    "DataType": "AzureActivity",
+    "TableName": "PrimaryResult",
+    "TotalMB": "3.748681"
+  },
+  {
+    "BillableMB": "0",
+    "DataType": "SecurityIncident",
+    "TableName": "PrimaryResult",
+    "TotalMB": "0.023838"
+  },
+  {
+    "BillableMB": "0",
+    "DataType": "SecurityAlert",
+    "TableName": "PrimaryResult",
+    "TotalMB": "0.045812"
+  },
+  {
+    "BillableMB": "0",
+    "DataType": "Operation",
+    "TableName": "PrimaryResult",
+    "TotalMB": "0.000182"
+  }
+]

@@ -1,0 +1,11 @@
+PASS: Restricted Pod Security
+PASS: Non-root execution
+PASS: No privilege escalation
+PASS: Read-only root filesystem
+PASS: Dropped Linux capabilities
+PASS: RuntimeDefault seccomp
+PASS: Disabled token mounting
+PASS: Resource limits
+PASS: Network policy
+PASS: Private ClusterIP service
+Failures: 0

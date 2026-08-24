@@ -1,0 +1,6 @@
+MEMO Day 15 Bicep Validation
+PASS: infrastructure/bicep/defender-governance/main.bicep
+PASS: infrastructure/bicep/policy-governance/main.bicep
+PASS: infrastructure/bicep/sentinel-automation/main.bicep
+PASS: infrastructure/bicep/sentinel-detections/main.bicep
+Failures: 0

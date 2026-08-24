@@ -1,0 +1,16 @@
+PASS: Dockerfile exists and is not empty
+PASS: .dockerignore exists and is not empty
+PASS: default.conf exists and is not empty
+PASS: index.html exists and is not empty
+PASS: README.md exists and is not empty
+PASS: Version-specific base image
+PASS: Explicit non-root user
+PASS: Unprivileged port
+PASS: Container health check
+PASS: No server version disclosure
+PASS: Content-type protection
+PASS: Frame protection
+PASS: Content Security Policy
+PASS: Dockerfile never switches to root
+PASS: Dockerfile copies only required files
+Failures: 0

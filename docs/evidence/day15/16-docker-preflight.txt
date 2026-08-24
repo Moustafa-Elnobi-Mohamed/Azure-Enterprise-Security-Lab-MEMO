@@ -1,0 +1,6 @@
+MEMO Day 15 Docker Preflight
+Docker CLI: AVAILABLE
+Docker engine: UNAVAILABLE IN CLOUD SHELL
+Local build performed: NO
+Build validation method: GitHub Actions
+Azure resource deployed: NO

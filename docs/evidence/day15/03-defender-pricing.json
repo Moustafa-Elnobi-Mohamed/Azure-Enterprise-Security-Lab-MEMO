@@ -1,0 +1,110 @@
+[
+  {
+    "Plan": "VirtualMachines",
+    "Tier": "Free",
+    "SubPlan": null,
+    "Coverage": null
+  },
+  {
+    "Plan": "SqlServers",
+    "Tier": "Free",
+    "SubPlan": null,
+    "Coverage": null
+  },
+  {
+    "Plan": "AppServices",
+    "Tier": "Free",
+    "SubPlan": null,
+    "Coverage": null
+  },
+  {
+    "Plan": "StorageAccounts",
+    "Tier": "Free",
+    "SubPlan": null,
+    "Coverage": null
+  },
+  {
+    "Plan": "SqlServerVirtualMachines",
+    "Tier": "Free",
+    "SubPlan": null,
+    "Coverage": null
+  },
+  {
+    "Plan": "KubernetesService",
+    "Tier": "Free",
+    "SubPlan": null,
+    "Coverage": null
+  },
+  {
+    "Plan": "ContainerRegistry",
+    "Tier": "Free",
+    "SubPlan": null,
+    "Coverage": null
+  },
+  {
+    "Plan": "KeyVaults",
+    "Tier": "Free",
+    "SubPlan": null,
+    "Coverage": null
+  },
+  {
+    "Plan": "Dns",
+    "Tier": "Free",
+    "SubPlan": null,
+    "Coverage": null
+  },
+  {
+    "Plan": "Arm",
+    "Tier": "Free",
+    "SubPlan": null,
+    "Coverage": null
+  },
+  {
+    "Plan": "OpenSourceRelationalDatabases",
+    "Tier": "Free",
+    "SubPlan": null,
+    "Coverage": null
+  },
+  {
+    "Plan": "CosmosDbs",
+    "Tier": "Free",
+    "SubPlan": null,
+    "Coverage": null
+  },
+  {
+    "Plan": "Containers",
+    "Tier": "Free",
+    "SubPlan": null,
+    "Coverage": null
+  },
+  {
+    "Plan": "CloudPosture",
+    "Tier": "Free",
+    "SubPlan": null,
+    "Coverage": null
+  },
+  {
+    "Plan": "Api",
+    "Tier": "Free",
+    "SubPlan": null,
+    "Coverage": null
+  },
+  {
+    "Plan": "AI",
+    "Tier": "Free",
+    "SubPlan": null,
+    "Coverage": null
+  },
+  {
+    "Plan": "Discovery",
+    "Tier": "Standard",
+    "SubPlan": null,
+    "Coverage": null
+  },
+  {
+    "Plan": "FoundationalCspm",
+    "Tier": "Standard",
+    "SubPlan": null,
+    "Coverage": null
+  }
+]
