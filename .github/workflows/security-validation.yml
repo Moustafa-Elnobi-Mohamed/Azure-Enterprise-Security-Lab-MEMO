@@ -36,6 +36,7 @@ jobs:
           python -m py_compile automation/python/memo_security_validator.py
           python -m py_compile automation/python/validate_repo_artifacts.py
           python -m py_compile automation/python/validate_ai_security_design.py
+          python -m py_compile automation/python/validate_repository_hygiene.py
 
       - name: Validate sanitized Azure evidence
         run: python automation/python/memo_security_validator.py
@@ -45,6 +46,9 @@ jobs:
 
       - name: Validate design-only AI security controls
         run: python automation/python/validate_ai_security_design.py
+
+      - name: Validate public repository hygiene
+        run: python automation/python/validate_repository_hygiene.py
 
   infrastructure-as-code:
     name: Terraform and Bicep

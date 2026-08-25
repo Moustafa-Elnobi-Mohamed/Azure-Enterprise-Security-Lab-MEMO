@@ -150,7 +150,7 @@ Terraform will perform the following actions:
       + registration_enabled  = false
       + resolution_policy     = (known after apply)
       + resource_group_name   = "MEMO-RG-Network"
-      + virtual_network_id    = "/subscriptions/bab0deae-9a08-48d3-be47-9d3fe97b26b8/resourceGroups/MEMO-RG-Network/providers/Microsoft.Network/virtualNetworks/MEMO-VNET-CORE"
+      + virtual_network_id    = "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/MEMO-RG-Network/providers/Microsoft.Network/virtualNetworks/MEMO-VNET-CORE"
     }
 
   # module.storage_private_endpoint.azurerm_private_endpoint.memo will be created
@@ -162,7 +162,7 @@ Terraform will perform the following actions:
       + network_interface        = (known after apply)
       + private_dns_zone_configs = (known after apply)
       + resource_group_name      = "MEMO-RG-Network"
-      + subnet_id                = "/subscriptions/bab0deae-9a08-48d3-be47-9d3fe97b26b8/resourceGroups/MEMO-RG-Network/providers/Microsoft.Network/virtualNetworks/MEMO-VNET-CORE/subnets/MEMO-SUBNET-DATA"
+      + subnet_id                = "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/MEMO-RG-Network/providers/Microsoft.Network/virtualNetworks/MEMO-VNET-CORE/subnets/MEMO-SUBNET-DATA"
       + tags                     = {
           + "Environment" = "Lab"
           + "ManagedBy"   = "Terraform"

@@ -1,2 +1,2 @@
 "Project","Group","Role","Scope","StartTime","Expiration","RequestedBy"
-"MEMO","MEMO-GRP-Cloud-Engineers","Contributor","/subscriptions/bab0deae-9a08-48d3-be47-9d3fe97b26b8/resourceGroups/MEMO-RG-Development","8/8/2026 4:21:08 PM","8/8/2026 4:51:08 PM","elnobimostafa@gmail.com"
+"MEMO","MEMO-GRP-Cloud-Engineers","Contributor","/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/MEMO-RG-Development","8/8/2026 4:21:08 PM","8/8/2026 4:51:08 PM","authorized-admin@example.invalid"

@@ -1,0 +1,9 @@
+PASS: Tracked repository inventory is available
+PASS: Tracked filenames use portable ASCII characters
+PASS: No empty placeholder files are tracked
+PASS: No tracked file exceeds 5 MiB
+PASS: No prohibited secret or state files are tracked
+PASS: No credential or public subscription patterns detected
+PASS: No unintended public email addresses detected
+
+Repository hygiene failures: 0

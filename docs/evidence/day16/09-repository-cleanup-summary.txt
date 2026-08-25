@@ -1,0 +1,10 @@
+MEMO Day 16 Repository Hygiene
+Malformed tracked filenames removed: 1
+Empty placeholder files removed: 10
+Hardcoded tenant RBAC configuration removed: 1
+Subscription ID matches remaining: 0
+Personal email matches remaining: 0
+Tenant-domain matches remaining: 0
+Credential-shaped matches remaining: 0
+Tracked files above 5 MiB: 0
+Repository hygiene failures: 0
