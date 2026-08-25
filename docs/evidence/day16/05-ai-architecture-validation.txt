@@ -1,0 +1,15 @@
+PASS: Design-only status
+PASS: Zero-cost boundary
+PASS: Managed identity
+PASS: Least privilege
+PASS: Private connectivity
+PASS: Prompt injection
+PASS: Sensitive-data protection
+PASS: Tool allowlisting
+PASS: Output validation
+PASS: Human approval
+PASS: Monitoring
+PASS: Kill switch
+PASS: AI red teaming
+PASS: No false deployment claim
+AI architecture failures: 0

@@ -1,0 +1,38 @@
+PASS: Required file exists: ai-security-architecture.md
+PASS: Required file is not empty: ai-security-architecture.md
+PASS: Required file exists: ai-threat-model.md
+PASS: Required file is not empty: ai-threat-model.md
+PASS: Architecture control: Explicit design-only status
+PASS: Architecture control: Zero-cost boundary
+PASS: Architecture control: Managed identity
+PASS: Architecture control: Least-privilege access
+PASS: Architecture control: Private endpoint design
+PASS: Architecture control: Prompt-injection defense
+PASS: Architecture control: Sensitive-data protection
+PASS: Architecture control: Tool allowlisting
+PASS: Architecture control: Output security
+PASS: Architecture control: Human approval
+PASS: Architecture control: Security monitoring
+PASS: Architecture control: Kill switch
+PASS: Architecture control: AI red-team requirement
+PASS: Architecture control: No live deployment claim
+PASS: Twelve AI risks are documented
+PASS: AI risk identifiers are unique
+PASS: Twelve AI red-team tests are documented
+PASS: Red-team test identifiers are unique
+PASS: Threat-model section: Protected assets
+PASS: Threat-model section: Threat actors
+PASS: Threat-model section: Trust boundaries
+PASS: Threat-model section: Risk register
+PASS: Threat-model section: Red-team plan
+PASS: Threat-model section: Incident response
+PASS: Threat-model section: Acceptance criteria
+PASS: Threat-model section: Validation boundary
+PASS: Architecture is marked DESIGN-ONLY
+PASS: Threat model is marked DESIGN-ONLY
+PASS: Architecture records that no AI resource was created
+PASS: Threat model records that no AI endpoint was deployed
+PASS: Architecture does not claim LIVE status
+PASS: Threat model does not claim LIVE status
+
+AI security design failures: 0

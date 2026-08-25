@@ -1,0 +1,8 @@
+{
+  "OverallStatus": "PASS_WITH_EXCEPTIONS",
+  "Summary": {
+    "PASS": 10,
+    "FAIL": 0,
+    "DOCUMENTED_EXCEPTION": 2
+  }
+}
