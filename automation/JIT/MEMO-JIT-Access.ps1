@@ -57,11 +57,15 @@ $Log = [PSCustomObject]@{
     RequestedBy = (Get-AzContext).Account.Id
 }
 
-New-Item -ItemType Directory -Path ".\logs" -Force | Out-Null
+$RepositoryRoot = Resolve-Path (Join-Path $PSScriptRoot "..\..")
+$LogDirectory = Join-Path $RepositoryRoot ".local\logs"
+$LogPath = Join-Path $LogDirectory "MEMO-JIT-Audit.csv"
+
+New-Item -ItemType Directory -Path $LogDirectory -Force | Out-Null
 
 $Log | Export-Csv `
-    ".\logs\MEMO-JIT-Audit.csv" `
+    $LogPath `
     -NoTypeInformation `
     -Append
 
-Write-Host "Audit record written." -ForegroundColor Green
+Write-Host "Audit record written to $LogPath" -ForegroundColor Green

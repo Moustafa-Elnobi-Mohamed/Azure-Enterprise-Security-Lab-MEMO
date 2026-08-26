@@ -6,9 +6,14 @@ Public evidence is sanitized and must not contain credentials, personal email ad
 
 ## Daily evidence
 
+- [day08](day08/)
 - [day10](day10/)
 - [day12](day12/)
 - [day13](day13/)
 - [day14](day14/)
 - [day15](day15/)
 - [day16](day16/)
+
+## Cross-day evidence
+
+- [Sanitized JIT access audit](jit/memo-jit-audit.csv)

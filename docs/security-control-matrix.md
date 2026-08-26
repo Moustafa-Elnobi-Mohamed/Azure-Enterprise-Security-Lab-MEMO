@@ -10,7 +10,7 @@ This matrix maps the security controls implemented or validated in the MEMO Azur
 |---|---|---|---|---|---|
 | Governance | Enterprise resource organization | Twelve MEMO resource groups separate identity, networking, security, monitoring, containers, departments, production, development, shared services, and sandbox resources | Live | `docs/evidence/day15/01-resource-groups.json` | PASS |
 | Governance | Security posture management | Free Foundational CSPM and Discovery provide recommendations without enabling paid workload plans | Live | `docs/evidence/day15/03-defender-pricing.json` | PASS |
-| Identity | Enterprise identity structure | Department-based Entra ID users, groups, role assignments, and RBAC documentation | Live and documented | `identity/`, `docs/RBAC/` | PASS |
+| Identity | Enterprise identity structure | Department-based Entra ID users, groups, role assignments, and RBAC documentation | Live and documented | `docs/RBAC/`, `infrastructure/workloads/docs/workload-identity.md` | PASS |
 | Workload identity | Secretless workload authentication | Azure managed identity and Key Vault Secrets User role replace application credentials | Live | Identity and Key Vault project evidence | PASS |
 | Network security | Segmentation and traffic filtering | MEMO VNet, application, management, data, and security NSGs with controlled administration paths | Live | `infrastructure/networking/`, Terraform networking module | PASS |
 | Secrets | Key Vault authorization | Azure RBAC authorization and least-privilege secret access | Live | `docs/evidence/day15/05-key-vault-validation.json` | PASS |

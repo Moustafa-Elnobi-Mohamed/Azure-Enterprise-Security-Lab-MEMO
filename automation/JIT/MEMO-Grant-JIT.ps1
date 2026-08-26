@@ -60,10 +60,12 @@ Write-Host "Start     : $Start"
 Write-Host "Expires   : $Expiration"
 Write-Host ""
 
-# Write an audit record
-$LogPath = ".\logs\MEMO-JIT.log"
+# Write a local audit record outside the tracked repository inventory.
+$RepositoryRoot = Resolve-Path (Join-Path $PSScriptRoot "..\..")
+$LogDirectory = Join-Path $RepositoryRoot ".local\logs"
+$LogPath = Join-Path $LogDirectory "MEMO-JIT.log"
 
-New-Item -ItemType Directory -Force -Path ".\logs" | Out-Null
+New-Item -ItemType Directory -Force -Path $LogDirectory | Out-Null
 
 @"
 [$Start]

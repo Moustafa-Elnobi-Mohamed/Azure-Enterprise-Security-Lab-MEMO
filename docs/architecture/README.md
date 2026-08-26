@@ -7,6 +7,7 @@ This directory documents the architecture decisions behind the MEMO Azure Enterp
 - [Enterprise security architecture](MEMO-Security-Architecture.md)
 - [Final Azure architecture](day-8-final-architecture.md)
 - [Storage security design](storage-security-design.md)
+- [Workload identity architecture](../../infrastructure/workloads/docs/workload-identity.md)
 - [Secure AI architecture](ai-security/ai-security-architecture.md)
 - [AI security threat model](ai-security/ai-threat-model.md)
 - [Public security lifecycle visual](memo-foundation-public-visual.svg)

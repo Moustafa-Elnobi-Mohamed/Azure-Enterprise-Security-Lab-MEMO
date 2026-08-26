@@ -185,6 +185,7 @@ These are documented exceptions, not silent passes.
 | Final project closeout | [Day 16 closeout](docs/reports/day16-project-closeout.md) |
 | Technical validation report | [Day 15 validation](docs/reports/day15-final-security-validation.md) |
 | Enterprise control matrix | [Security control matrix](docs/security-control-matrix.md) |
+| RBAC matrix | [Identity and access model](docs/RBAC/RBAC-Matrix.md) |
 | AI architecture | [Secure AI architecture](docs/architecture/ai-security/ai-security-architecture.md) |
 | AI threat model | [AI threat model](docs/architecture/ai-security/ai-threat-model.md) |
 | Daily engineering notes | [Daily notes](docs/daily-notes/) |

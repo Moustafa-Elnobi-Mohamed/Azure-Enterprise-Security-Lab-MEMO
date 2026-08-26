@@ -45,6 +45,9 @@ terraform.rc
 __pycache__/
 *.py[cod]
 
+# Local runtime output that may contain tenant-specific audit details
+.local/
+
 # Terraform binary plan files
 *.tfplan
 *tfplan*

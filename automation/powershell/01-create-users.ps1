@@ -1,9 +1,13 @@
 Import-Module Microsoft.Graph.Users
 
-$Users = Import-Csv ".\data\employees.csv"
+$AutomationRoot = Split-Path $PSScriptRoot -Parent
+$CsvPath = Join-Path $AutomationRoot "identity-data\employees.csv"
 
+if (-not (Test-Path $CsvPath)) {
+    throw "Identity data file was not found: $CsvPath"
+}
 
-
+$Users = Import-Csv $CsvPath
 
 $SecureInitialPassword = Read-Host "Enter the temporary user password" -AsSecureString
 $InitialPassword = [System.Net.NetworkCredential]::new("", $SecureInitialPassword).Password

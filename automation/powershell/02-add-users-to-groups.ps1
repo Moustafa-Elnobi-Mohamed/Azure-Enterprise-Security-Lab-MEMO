@@ -1,8 +1,15 @@
 Import-Module Microsoft.Graph.Groups
 Import-Module Microsoft.Graph.Users
 
-# Load CSV
-$Users = Import-Csv ".\automation\data\employees.csv"
+# Load the canonical sanitized identity dataset.
+$AutomationRoot = Split-Path $PSScriptRoot -Parent
+$CsvPath = Join-Path $AutomationRoot "identity-data\employees.csv"
+
+if (-not (Test-Path $CsvPath)) {
+    throw "Identity data file was not found: $CsvPath"
+}
+
+$Users = Import-Csv $CsvPath
 
 foreach ($User in $Users) {
     Write-Host ""
@@ -36,16 +43,4 @@ foreach ($User in $Users) {
     catch {
         Write-Host "⚠️ Already a member or another error occurred." -ForegroundColor Yellow
     }
-}
-
-$Member = Get-MgGroupMember `
-    -GroupId $Group.Id -All |
-Where-Object Id -eq $AzureUser.Id
-
-if (-not $Member) {
-    New-MgGroupMemberByRef ...
-    Write-Host "✅ Added"
-}
-else {
-    Write-Host "Already a member"
 }
