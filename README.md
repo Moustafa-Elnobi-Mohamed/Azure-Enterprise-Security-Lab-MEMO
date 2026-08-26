@@ -180,6 +180,8 @@ These are documented exceptions, not silent passes.
 
 | Area | Location |
 |---|---|
+| Public presentation rehearsal | [Final rehearsal and technical review](docs/reports/public-project-rehearsal.md) |
+| Security lifecycle visual | [MEMO lifecycle infographic](docs/architecture/memo-foundation-public-visual.svg) |
 | Final project closeout | [Day 16 closeout](docs/reports/day16-project-closeout.md) |
 | Technical validation report | [Day 15 validation](docs/reports/day15-final-security-validation.md) |
 | Enterprise control matrix | [Security control matrix](docs/security-control-matrix.md) |
