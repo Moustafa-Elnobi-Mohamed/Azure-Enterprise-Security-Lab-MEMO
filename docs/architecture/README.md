@@ -9,6 +9,7 @@ This directory documents the architecture decisions behind the MEMO Azure Enterp
 - [Storage security design](storage-security-design.md)
 - [Secure AI architecture](ai-security/ai-security-architecture.md)
 - [AI security threat model](ai-security/ai-threat-model.md)
+- [Public security lifecycle visual](memo-foundation-public-visual.svg)
 
 ## Architecture boundary
 
