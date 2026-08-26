@@ -59,6 +59,8 @@ for filename in tracked_files:
 
     if (
         lower_name.endswith(".tfstate")
+        or lower_name.endswith(".tfplan")
+        or "tfplan" in Path(filename).name.lower()
         or ".tfstate." in lower_name
         or lower_name.endswith(".pem")
         or lower_name.endswith(".pfx")

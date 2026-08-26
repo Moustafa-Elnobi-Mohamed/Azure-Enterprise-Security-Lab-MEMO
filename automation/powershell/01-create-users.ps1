@@ -5,6 +5,9 @@ $Users = Import-Csv ".\data\employees.csv"
 
 
 
+$SecureInitialPassword = Read-Host "Enter the temporary user password" -AsSecureString
+$InitialPassword = [System.Net.NetworkCredential]::new("", $SecureInitialPassword).Password
+
 foreach ($User in $Users) {
 
     $Existing = Get-MgUser -Filter "userPrincipalName eq '$($User.UserPrincipalName)'"
@@ -15,7 +18,7 @@ foreach ($User in $Users) {
     }
 
     $Password = @{
-        Password                      = "Password123!"
+        Password                      = $InitialPassword
         ForceChangePasswordNextSignIn = $true
     }
 

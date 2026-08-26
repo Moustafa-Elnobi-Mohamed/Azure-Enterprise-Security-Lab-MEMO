@@ -44,3 +44,7 @@ terraform.rc
 # planout
 __pycache__/
 *.py[cod]
+
+# Terraform binary plan files
+*.tfplan
+*tfplan*
