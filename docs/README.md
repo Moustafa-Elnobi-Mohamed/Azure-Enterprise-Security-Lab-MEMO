@@ -6,7 +6,7 @@ evidence, operational reports, access design, and troubleshooting.
 | Area | Purpose |
 |---|---|
 | [Architecture](architecture/) | Enterprise design decisions and security boundaries |
-| [Daily notes](daily-notes/) | Day-by-day implementation and lessons learned |
+| [Daily notes](daily-notes/) | Complete build guide plus Day 1 through Day 16 engineering notes |
 | [Evidence](evidence/) | Sanitized screenshots, inventories, and validation output |
 | [RBAC](RBAC/) | Canonical identity and access model |
 | [Reports](reports/) | Final assurance, closeout, and public rehearsal |

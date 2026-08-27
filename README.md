@@ -180,6 +180,7 @@ These are documented exceptions, not silent passes.
 
 | Area | Location |
 |---|---|
+| Complete step-by-step build guide | [Sixteen-day reproduction guide](docs/daily-notes/complete-step-by-step-guide.md) |
 | Public presentation rehearsal | [Final rehearsal and technical review](docs/reports/public-project-rehearsal.md) |
 | Security lifecycle visual | [MEMO lifecycle infographic](docs/architecture/memo-foundation-public-visual.svg) |
 | Final project closeout | [Day 16 closeout](docs/reports/day16-project-closeout.md) |
